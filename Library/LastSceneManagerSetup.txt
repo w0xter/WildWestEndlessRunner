@@ -1,7 +1,11 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/MenuPrincipal.unity
   isLoaded: 1
   isActive: 0
 - path: Assets/Scenes/METEDELJUEGOAQUI.unity
+=======
+- path: Assets/Scenes/PersonalScene.unity
+>>>>>>> 564e4281516687caea09905a477190cd2c454cd6
   isLoaded: 1
   isActive: 1
