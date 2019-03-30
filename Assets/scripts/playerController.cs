@@ -11,9 +11,8 @@ public class playerController : MonoBehaviour
     private Rigidbody2D playerRB;
 
     private bool isGrounded;
-    public Transform groundCheck;
-    public float checkRadius;
     public LayerMask whatIsGround;
+    private Collider2D groundCheck;
 
     private int extraJumps;
     public int extraJumpsValue;
@@ -23,12 +22,13 @@ public class playerController : MonoBehaviour
     {
         extraJumps = extraJumpsValue;
         playerRB = GetComponent<Rigidbody2D>();
+        groundCheck = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        isGrounded = Physics2D.IsTouchingLayers(groundCheck, whatIsGround);
 
         moveInput = Input.GetAxis("Horizontal");
         playerRB.velocity = new Vector2(moveInput * speed, playerRB.velocity.y);
