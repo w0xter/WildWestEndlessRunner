@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Personal.unity
+- path: Assets/Scenes/METEDELJUEGOAQUI.unity
   isLoaded: 1
   isActive: 1
