@@ -7,6 +7,7 @@ public class platformGenerator : MonoBehaviour
 	private float maxY;
 	private float minY;
 	public GameObject platform;
+	public GameObject spawnPlatform;
 	private float actualPosition;
 	public float spwanTime;
     // Start is called before the first frame update
@@ -14,8 +15,8 @@ public class platformGenerator : MonoBehaviour
     {
         maxY = 4.5f;
         minY = -4.5f;
-        actualPosition = Random.Range(minY, maxY);
-        InvokeRepeating("spawnPlatform", 0, spwanTime);
+        createSpanwPlatform();
+        InvokeRepeating("platformCreator", 0, spwanTime);
     }
 
     // Update is called once per frame
@@ -23,10 +24,10 @@ public class platformGenerator : MonoBehaviour
     {
         
     }
-    private void spawnPlatform(){
+    private void platformCreator(){
     	float y  = generarSiguientePlataforma();
     	Vector3 xyzPosition = new Vector3(transform.position.x, y, 0);
-    	Instantiate(platform, xyzPosition, transform.rotation);
+    	Instantiate(platform, xyzPosition, platform.transform.rotation);
     }
     private	float generarSiguientePlataforma(){
     	float maxRango = actualPosition + 2;
@@ -34,5 +35,13 @@ public class platformGenerator : MonoBehaviour
     		maxRango = actualPosition;
     	float y  = Random.Range(minY, maxRango);
     	return y;
+    }
+    private void createSpanwPlatform(){
+		Vector3 position = new Vector3(-3, -4, 0);
+		Instantiate(spawnPlatform, position, spawnPlatform.transform.rotation);
+		actualPosition = -4;
+
+
+
     }
 }
