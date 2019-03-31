@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class actualizarPuntuacion : MonoBehaviour {
 
-    public int score;
+    public float score;
     public Text scoreDisplay;
 
     private void Update()
     {
-        score += (int) Time.deltaTime;
-        scoreDisplay.text = score.ToString("Score: " + score);
+        score += Time.deltaTime;
+        scoreDisplay.text = "Score: " + score.ToString("0");
     }
 }
