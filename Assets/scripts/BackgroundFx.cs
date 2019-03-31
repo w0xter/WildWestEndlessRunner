@@ -2,14 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Background : MonoBehaviour {
+public class BackgroundFx : MonoBehaviour {
 
 
-    public float speed;
-    public float Xend;
-    public float Xstart;
+    private float speed;
+    private float Xend;
+    private float Xstart;
 
-    private void Update()
+     void Start()
+    {
+        Xend = -19F;
+        Xstart = 17.9F;
+        speed = 4F;
+    }
+
+     void Update()
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
         if (transform.position.x < Xend) {

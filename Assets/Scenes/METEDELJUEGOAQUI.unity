@@ -1620,9 +1620,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c43c222df2b3424a90c5331af0eae7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  Xend: -19
-  Xstart: 18
 --- !u!212 &1043130999
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1916,9 +1913,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c43c222df2b3424a90c5331af0eae7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  Xend: -19
-  Xstart: 18
 --- !u!1 &1516883723
 GameObject:
   m_ObjectHideFlags: 0
