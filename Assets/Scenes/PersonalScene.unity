@@ -405,8 +405,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c00d4917a72e28642a64f5f098621043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: MenuPrincipal
   gameOverMenuCanvas: {fileID: 361355589}
+  player: {fileID: 0}
+  alive: 0
 --- !u!4 &286317485
 Transform:
   m_ObjectHideFlags: 0
