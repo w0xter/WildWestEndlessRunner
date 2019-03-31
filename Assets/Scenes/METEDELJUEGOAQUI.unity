@@ -209,6 +209,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Restart
       objectReference: {fileID: 0}
+    - target: {fileID: 7367706242485672318, guid: 8fee4bc28b12f4e4ba35bcd6ad92da04,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.012494
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367706242485672318, guid: 8fee4bc28b12f4e4ba35bcd6ad92da04,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 953.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367706242485672319, guid: 8fee4bc28b12f4e4ba35bcd6ad92da04,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fee4bc28b12f4e4ba35bcd6ad92da04, type: 3}
 --- !u!1001 &119822481
@@ -537,7 +552,7 @@ PrefabInstance:
     - target: {fileID: 8687482101429149623, guid: 452edf6ac56d3ad4b95428700e517149,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.46651292
+      value: -0.44
       objectReference: {fileID: 0}
     - target: {fileID: 8687482101429149623, guid: 452edf6ac56d3ad4b95428700e517149,
         type: 3}
@@ -552,17 +567,22 @@ PrefabInstance:
     - target: {fileID: 8687482101429149623, guid: 452edf6ac56d3ad4b95428700e517149,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.033680916
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8687482101429149623, guid: 452edf6ac56d3ad4b95428700e517149,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.02319169
+      value: 0.021321297
       objectReference: {fileID: 0}
     - target: {fileID: 8687482101429149623, guid: 452edf6ac56d3ad4b95428700e517149,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.43873358
+      value: 0.54888344
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687482101429149623, guid: 452edf6ac56d3ad4b95428700e517149,
+        type: 3}
+      propertyPath: m_UsedByComposite
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8687482101429149622, guid: 452edf6ac56d3ad4b95428700e517149,
         type: 3}
