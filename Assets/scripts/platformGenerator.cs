@@ -37,7 +37,7 @@ public class platformGenerator : MonoBehaviour
     	return y;
     }
     private void createSpanwPlatform(){
-		Vector3 position = new Vector3(-3, -4, 0);
+		Vector3 position = new Vector3(-3, -5, 0);
 		Instantiate(spawnPlatform, position, spawnPlatform.transform.rotation);
 		actualPosition = -4;
 

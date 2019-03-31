@@ -13,7 +13,7 @@ public class gameOverMenu : MonoBehaviour
     void Start()
     {
         alive = true;
-        //gameOverMenuCanvas.SetActive(false);
+        gameOverMenuCanvas.SetActive(false);
 
 
     }
@@ -21,12 +21,12 @@ public class gameOverMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*alive = player.transform.position.y >= -5F;
+        alive = player.transform.position.y >= -5F;
         if(!alive){
             gameOverMenuCanvas.SetActive(true);
-            Time.timeScale = 0f;
+            //Time.timeScale = 0f;
         }
-        */
+        
         Time.timeScale = 0f;
     }
 

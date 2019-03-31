@@ -9,18 +9,20 @@ public class playerController : MonoBehaviour
     private float moveInput;
 
     private Rigidbody2D playerRB;
-
+    public Animator anim;
     private bool isGrounded;
     public LayerMask whatIsGround;
     private Collider2D groundCheck;
 
     private int extraJumps;
     public int extraJumpsValue;
+  //  private bool isAlive;
 
     // Start is called before the first frame update
     void Start()
     {
         extraJumps = extraJumpsValue;
+        //anim = GetComponent<Animator>();
         playerRB = GetComponent<Rigidbody2D>();
         groundCheck = GetComponent<Collider2D>();
     }
@@ -39,6 +41,9 @@ public class playerController : MonoBehaviour
         if (isGrounded == true)
         {
             extraJumps = extraJumpsValue;
+            anim.SetBool("grounded", true);
+        }else{
+            anim.SetBool("grounded",false);
         }
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && extraJumps > 0)
         {
@@ -49,5 +54,8 @@ public class playerController : MonoBehaviour
         {
             playerRB.velocity = Vector2.up * jumpForce;
         }
+            //isAlive = playerRB.transform.position.y > 4.5f;
+            
+            //anim.SetBool("alive",isAlive);
     }
 }
