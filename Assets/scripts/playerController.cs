@@ -9,11 +9,14 @@ public class playerController : MonoBehaviour
     private float moveInput;
 
     private Rigidbody2D playerRB;
+    public  GameObject player;
+    public static float altura;
     public Animator anim;
-    private bool isGrounded;
+    public static bool isGrounded;
     public LayerMask whatIsGround;
     private Collider2D groundCheck;
-
+    public static bool isAlive;
+    public bool alive;
     private int extraJumps;
     public int extraJumpsValue;
   //  private bool isAlive;
@@ -21,6 +24,8 @@ public class playerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        isAlive = player.transform.position.y > -4.5f;
         extraJumps = extraJumpsValue;
         //anim = GetComponent<Animator>();
         playerRB = GetComponent<Rigidbody2D>();
@@ -30,14 +35,20 @@ public class playerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        isGrounded = Physics2D.IsTouchingLayers(groundCheck, whatIsGround);
-
-        moveInput = Input.GetAxis("Horizontal");
-        playerRB.velocity = new Vector2(moveInput * speed, playerRB.velocity.y);
+        isAlive = player.transform.position.y > -4.5f;
+        if(isAlive){
+            isGrounded = Physics2D.IsTouchingLayers(groundCheck, whatIsGround);
+            moveInput = Input.GetAxis("Horizontal");
+            playerRB.velocity = new Vector2(moveInput * speed, playerRB.velocity.y);
+        }
     }
 
     void Update()
     {
+         isAlive = player.transform.position.y > -4.5f;
+         alive = isAlive;
+         if(isAlive){
+         altura = player.transform.position.y;
         if (isGrounded == true)
         {
             extraJumps = extraJumpsValue;
@@ -54,8 +65,7 @@ public class playerController : MonoBehaviour
         {
             playerRB.velocity = Vector2.up * jumpForce;
         }
-            //isAlive = playerRB.transform.position.y > 4.5f;
-            
-            //anim.SetBool("alive",isAlive);
+    }
+       
     }
 }

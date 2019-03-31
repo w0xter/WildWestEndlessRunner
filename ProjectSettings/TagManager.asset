@@ -41,6 +41,15 @@ TagManager:
   - name: BackGorund
     uniqueID: 450851945
     locked: 0
+  - name: platformBg
+    uniqueID: 3049296901
+    locked: 0
+  - name: platformbg1
+    uniqueID: 1219460723
+    locked: 0
+  - name: platformBg2
+    uniqueID: 280097865
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

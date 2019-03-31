@@ -24,7 +24,7 @@ public class startMenu : MonoBehaviour
         SceneManager.LoadScene("METEDELJUEGOAQUI");
     }
 
-    public void Quit()
+    public  void Quit()
     {
         Application.Quit();
         Debug.Log("Quit");
