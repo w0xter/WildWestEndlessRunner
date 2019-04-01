@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class gameOverMenu : MonoBehaviour
 {
     public GameObject gameOverMenuCanvas;
     public GameObject player;
+    public Text scoreDisplay;
     
 
     // Start is called before the first frame update
@@ -23,6 +25,7 @@ public class gameOverMenu : MonoBehaviour
         
         if(!playerController.isAlive){
             Time.timeScale = 0f;
+            scoreDisplay.text = "" + PlayerPrefs.GetInt("LastScore");
             gameOverMenuCanvas.SetActive(true);
             
         }
@@ -42,5 +45,7 @@ public class gameOverMenu : MonoBehaviour
     {
         SceneManager.LoadScene("MenuPrincipal");
     }
-
+    public void scoreBoard(){
+        SceneManager.LoadScene("ScoreBoardScene");
+    }
 }

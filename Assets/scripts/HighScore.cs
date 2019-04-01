@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using System;
+using UnityEngine.SceneManagement;
 
 public class HighScore : MonoBehaviour
 {
@@ -29,7 +30,8 @@ public class HighScore : MonoBehaviour
         guardado  = false;
         numberofScores = 0;
         puntos  = loadPoints();
-        loadScoreBoard(puntos);
+        scoreBoardCanvas.SetActive(false);
+        
     }
 
     void Update(){
@@ -42,7 +44,7 @@ public class HighScore : MonoBehaviour
                 Debug.Log("ScoreActualizado:D");
                 writeFile();
             }
-            
+            loadScoreBoard();
             guardado = true;
         }
     }
@@ -70,7 +72,7 @@ public class HighScore : MonoBehaviour
     	fs.Close();
         return puntos_aux;
     }
-    private void writeFile(){
+    private  void writeFile(){
         FileStream fs = new FileStream(scoreBoardFile, FileMode.Open);
         BinaryWriter bw = new BinaryWriter(fs);
         foreach(int score in puntos){
@@ -80,7 +82,7 @@ public class HighScore : MonoBehaviour
         fs.Close();
     }
 
-    private void loadScoreBoard(int[] usuarios){
+    private void loadScoreBoard(){
          int i = 0;
 
         foreach (RectTransform R in panel)
@@ -91,7 +93,7 @@ public class HighScore : MonoBehaviour
             {
                 if (i < 10)
                 {
-                    t.text = "" + usuarios[i];
+                    t.text = "" + puntos[i];
                     i++;
                 }
             }
@@ -117,5 +119,6 @@ public class HighScore : MonoBehaviour
         }
         return updated;
     }
+
 }
 

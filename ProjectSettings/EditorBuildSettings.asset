@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/METEDELJUEGOAQUI.unity
     guid: 1570f3125f52b5d4e86192552e86a4a6
+  - enabled: 0
+    path: Assets/Scenes/ScoreBoardScene.unity
+    guid: 1bb2abaaebbd63a408448d4d30cd23db
   m_configObjects: {}
