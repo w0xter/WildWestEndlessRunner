@@ -9,10 +9,12 @@ public class actualizarPuntuacion : MonoBehaviour {
     public Text scoreDisplay;
     public bool plataformaPuntuada;
     public bool scoreUpdated;
+    public static bool sePuedeActualizar;
 
     private void start(){
     	plataformaPuntuada = false;
     	scoreUpdated = false;
+        sePuedeActualizar = false;
     }
 
     private void Update()
@@ -30,6 +32,7 @@ public class actualizarPuntuacion : MonoBehaviour {
         	scoreUpdated = true;
         	PlayerPrefs.SetInt("LastScore", score);
         	Debug.Log("PlayerPrefs " + PlayerPrefs.GetInt("LastScore"));
+            sePuedeActualizar = true;
         }
         scoreDisplay.text = "" + score;
     }
