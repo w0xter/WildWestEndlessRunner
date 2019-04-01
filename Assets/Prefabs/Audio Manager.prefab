@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &245652519542193451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 245652519542193445}
+  - component: {fileID: 245652519542193450}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &245652519542193445
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245652519542193451}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.8138504, y: -0.7947484, z: 0.06021559}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &245652519542193450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245652519542193451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9ac1592ecb346ebb67df9f303fea60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientClip: {fileID: 0}
+  musicClip: {fileID: 8300000, guid: 317827049e751434da7e2a7d83d7f404, type: 3}
+  levelStingClip: {fileID: 0}
+  deathStingClip: {fileID: 0}
+  winStingClip: {fileID: 0}
+  orbStingClip: {fileID: 0}
+  doorOpenStingClip: {fileID: 0}
+  walkStepClips:
+  - {fileID: 8300000, guid: 2c1299556958eca4996e80a86b1be406, type: 3}
+  crouchStepClips: []
+  deathClip: {fileID: 0}
+  jumpClip: {fileID: 8300000, guid: a0dbed9ce01e1a246b5e98966eb9cb09, type: 3}
+  jumpVoiceClip: {fileID: 0}
+  deathVoiceClip: {fileID: 0}
+  orbVoiceClip: {fileID: 0}
+  winVoiceClip: {fileID: 0}
+  ambientGroup: {fileID: 0}
+  musicGroup: {fileID: 0}
+  stingGroup: {fileID: 0}
+  playerGroup: {fileID: 0}
+  voiceGroup: {fileID: 0}
