@@ -12,7 +12,7 @@ public class BackgroundFx : MonoBehaviour {
      void Start()
     {
         Xend = -19F;
-        Xstart = 17.9F;
+        Xstart = 17.8F;
         speed = 4F;
     }
 

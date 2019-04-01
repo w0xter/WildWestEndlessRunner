@@ -28,9 +28,7 @@ public class platformGenerator : MonoBehaviour
         maxY = 4.5f;
         minY = -4.5f;
         createSpanwPlatform();
-        if(playerController.isAlive){
-     	   InvokeRepeating("platformCreator", 0, spwanTime);
-    	}
+     	InvokeRepeating("platformCreator", 0, spwanTime);
     }
 
     // Update is called once per frame
